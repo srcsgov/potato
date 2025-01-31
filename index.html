@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroSeed - Minecraft Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('back.png') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            position: relative;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            transition: transform 0.5s ease-in-out;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .logo:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+        h1 {
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        .cyrillic {
+            font-size: 40px;
+            opacity: 0.8;
+        }
+        .status {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .status .dot {
+            height: 15px;
+            width: 15px;
+            background-color: limegreen;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons img {
+            width: 150px;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .buttons img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="metro.png" alt="MetroSeed Logo" class="logo">
+        <h1>MetroSeed</h1>
+        <div class="cyrillic">МетроСид</div>
+        <div class="status">Server Location: Russia | Status: <span class="dot"></span> Online</div>
+        <div class="buttons">
+            <a href="forum.html"><img src="forum.png" alt="Forum"></a>
+            <a href="wiki.html"><img src="wiki_button.png" alt="Wiki"></a>
+            <a href="store.html"><img src="store_button.png" alt="Store"></a>
+        </div>
+    </div>
+</body>
+</html>

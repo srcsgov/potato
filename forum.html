@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroSeed Forum</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('back.png') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .forum-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .post {
+            border-bottom: 1px solid gray;
+            padding: 10px;
+            text-align: left;
+        }
+        .username {
+            font-weight: bold;
+            font-size: 18px;
+            color: #ffcc00;
+        }
+        .date {
+            font-size: 12px;
+            float: right;
+            color: gray;
+        }
+        .message {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        .submit-box {
+            margin-bottom: 20px;
+        }
+        .submit-box textarea {
+            width: 90%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .submit-box button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-box button:hover {
+            background-color: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="metro.png" alt="MetroSeed Logo" class="logo">
+        <div class="forum-header">MetroSeed Forum</div>
+        
+        <div class="submit-box">
+            <textarea id="message" placeholder="Write your message..."></textarea><br>
+            <button onclick="submitMessage()">Submit</button>
+        </div>
+        
+        <div id="forum-posts">
+            <div class="post">
+                <span class="username">user</span>
+                <span class="date">time</span>
+                <div class="message">welcome</div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <script>
+        function submitMessage() {
+            const message = document.getElementById("message").value;
+            if (message.trim() === "") return;
+            
+            const webhookURL = "https://discordapp.com/api/webhooks/1335008143431696414/FJMNVcqT5vm-xOsLYFwx7LZwVVIm4EHKlUBhBqFed2zTKTk71eKLOwkiREz0Bb35l7z9";
+            fetch(webhookURL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ content: message })
+            });
+            
+            alert("Message pending!");
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>
