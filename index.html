@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POU COLLECTION</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Black', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 800px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Featured products — scrollable on mobile, grid on desktop */
+    .featured-products {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 40px 20px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .featured-products a {
+      text-decoration: none;
+      color: black;
+      flex: 0 0 auto;
+      text-align: center;
+      scroll-snap-align: start;
+    }
+
+    .featured-products img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .featured-products img:hover {
+      transform: scale(1.05);
+    }
+
+    .featured-products .title {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .featured-products .price {
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .banner img {
+      width: 100%;
+      max-height: 800px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .product {
+      text-align: center;
+      text-decoration: none;
+      color: black;
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product img:hover {
+      transform: scale(1.05);
+    }
+
+    .product .title {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .product .price {
+      font-size: 0.95rem;
+      margin-top: 3px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 2px solid black;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: black;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+
+    /* Desktop adjustments */
+    @media (min-width: 1024px) {
+      header h1 {
+        font-size: 3rem;
+      }
+
+      .featured-products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        overflow-x: hidden;
+        padding: 60px 80px;
+      }
+
+      .featured-products img {
+        width: 100%;
+        height: 350px;
+      }
+
+      .featured-products .title {
+        font-size: 1.3rem;
+      }
+
+      .featured-products .price {
+        font-size: 1.1rem;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 80px 80px;
+      }
+
+      .product img {
+        height: 350px;
+      }
+
+      .product .title {
+        font-size: 1.2rem;
+      }
+
+      .product .price {
+        font-size: 1.1rem;
+      }
+
+      footer {
+        font-size: 1rem;
+        padding: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1></h1>
+    <img src="logo.png" alt="POU Logo">
+  </header>
+
+  <section class="hero">
+    <img src="hero1.png" alt="Hero Image">
+  </section>
+
+  <section class="featured-products">
+    <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+ <a href="pro1.html"><img src="pro1.png" alt="Product 1"><div class="title">Product 1</div><div class="price">$50</div></a>
+  </section>
+
+  <section class="banner">
+    <img src="hero2.png" alt="Banner Image">
+  </section>
+
+  <section class="product-grid">
+
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+    <a href="pro1.html" class="product"><img src="pro1.png" alt="Product 9"><div class="title">Product 9</div><div class="price">$50</div </a>
+
+ 
+   
+
+
+
+
+  </section>
+
+  <footer>
+    <a href="priv.html">Privacy Policy</a> |
+    <a href="security.html">Security</a> |
+    <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+  </footer>
+
+</body>
+</html>
